@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="plugin" group="system" method="upgrade">
+	<name>Chatbot - OpenAi Assistant</name>
+	<author>gabriel souza</author>
+	<creationDate>October 2024</creationDate>
+	<copyright> TODO </copyright>
+	<license> TODO </license>
+	<authorEmail>Gabriel.Souza.Silva@icen.ufpa.br</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>1.0</version>
+	<description>Uma extensão que cria um chat com interface com um assistente do OpenAI</description>
+	
+    <files>
+        <filename plugin="chatbotopenaiassistant">chatbotopenaiassistant.php</filename>
+        <filename>index.html</filename>
+		<filename>chatbotopenaiassistant.xml</filename>
+		<folder>assets</folder>
+    </files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+                <field name="assistants OpenAi" type="spacer" description=" " label="Acesse a platamforma &lt;a href='https://platform.openai.com/assistants' target='_blank'&gt;aqui&lt;/a&gt;" />
+
+                <field name="APIkey" type="text" filter="string" default="" label="API key" description="" />
+
+                <field name="assistantID" type="text" filter="string" default="" label="assistant ID" description="Please login to onwebchat.com and get your Chat Id" />
+
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+        <server type="extension" name="GitHub">https://raw.githubusercontent.com/GabrielSouza-201904940013/Joomla_chatbot_openAI_assistant/main/updates.xml</server>
+    </updateservers>
+
+</extension>
