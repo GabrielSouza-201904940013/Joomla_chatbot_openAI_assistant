@@ -11,34 +11,6 @@ use Joomla\String\StringHelper;
 class plgsystemChatbotopenaiassistant extends JPlugin
 {
     protected $app;
-    /*
-    public function onBeforeCompileHead()
-    {
-        // Verifica se estamos no frontend (pode evitar injeção no admin)
-        if ($this->app->isClient('site')) {
-            $doc = $this->app->getDocument();
-
-            if ($doc instanceof HtmlDocument) {
-                // Adicionando CSS e JS
-                $doc->addStyleSheet(Uri::root(true)."/plugins/system/chatbot_openAI_assistant/assets/bot.css");
-                $doc->addScript(Uri::root(true)."/plugins/system/chatbot_openAI_assistant/assets/bot.js");
-
-                //, array(),array('defer'=>'defer')
-            }
-        }
-    }
-
-    public function onAfterRender()
-    {
-        if (!$this->app->isClient('site')) return;
-
-        $body = $this->app->getBody();
-        $html = file_get_contents(__DIR__ . '/assets/bot.html');
-        $body = str_replace('</body>', $html . '</body>', $body);
-
-        $this->app->setBody($body);
-    }
-    */
     
     public function onAfterRender()
     {
@@ -176,26 +148,6 @@ class plgsystemChatbotopenaiassistant extends JPlugin
                 $response = $List['data'][0]['content'][0]['text']['value'];
             }
 
-            /*
-            for ($i = 0; $i < 20; $i++) {
-                $url3 = "https://api.openai.com/v1/threads/{$threadID}/runs/{$run_id}";
-                $Retrieve = json_decode($this->CurlRequest($url3, 'GET'), true);
-                if($Retrieve['status'] == 'completed') {
-                    //break;};
-                    //usleep($interval);
-                
-
-            // List messages ----------------------------------------------------------------
-                    $url4 = "https://api.openai.com/v1/threads/{$threadID}/messages";
-                    $result = $this->CurlRequest($url4, 'GET');
-                    $List = json_decode($result,true);
-                    $response = $List['data'][0]['content'][0]['text']['value'];
-                    
-                    break;
-                    usleep($interval);
-                }
-            }
-            */
             echo json_encode([
                 'value' => $response,
                 'threadID' => $threadID,

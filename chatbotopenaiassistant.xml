@@ -7,7 +7,7 @@
 	<license> TODO </license>
 	<authorEmail>Gabriel.Souza.Silva@icen.ufpa.br</authorEmail>
 	<authorUrl>www.joomla.org</authorUrl>
-	<version>1.0</version>
+	<version>1.0.1</version>
 	<description>Uma extensão que cria um chat com interface com um assistente do OpenAI</description>
 	
     <files>
