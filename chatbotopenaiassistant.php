@@ -138,7 +138,7 @@ class plgsystemChatbotopenaiassistant extends JPlugin
                 if ($erro) { break; }
 
                 usleep($interval);
-            } while ($Retrieve['status'] != 'completed');
+            } while ($retrieve['status'] != 'completed');
 
             // List messages ----------------------------------------------------------------
             if($retrieve['status'] == 'completed') {
