@@ -5,7 +5,7 @@
         <element>chatbot_openAI_assistant</element>
         <type>plugin</type>
         <version>1.0.2</version>
-        <client>1</client>
+        <client>site</client>
         <downloads>
             <downloadurl type="full" format="zip">https://github.com/GabrielSouza-201904940013/Joomla_chatbot_openAI_assistant/releases/download/v1.0.1/chatbot_openAI_assistant.zip</downloadurl>
         </downloads>
@@ -17,7 +17,7 @@
         <element>chatbot_openAI_assistant</element>
         <type>plugin</type>
         <version>1.0.1</version>
-        <client>1</client>
+        <client>site</client>
         <downloads>
             <downloadurl type="full" format="zip">https://github.com/GabrielSouza-201904940013/Joomla_chatbot_openAI_assistant/releases/download/v1.0.1/chatbot_openAI_assistant.zip</downloadurl>
         </downloads>
